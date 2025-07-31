@@ -41,6 +41,24 @@ export const LoginForm = () => {
     });
   }
 
+  function signInWithEmail() {
+    startEmailTransition(async () => {
+      await authClient.emailOtp.sendVerificationOtp({
+        email: email,
+        type: "sign-in",
+        fetchOptions: {
+          onSuccess: () => {
+            toast.success("Email sent");
+            router.push(`/verify-request?email=${email}`);
+          },
+          onError: (error) => {
+            toast.error("Internal server error");
+            toast.error("Error sending email");
+          },
+        },
+      });
+    });
+  }
   return (
     <Card className="w-full border border-border shadow-md backdrop-blur-sm">
       <CardHeader className="text-center space-y-1">
@@ -86,8 +104,8 @@ export const LoginForm = () => {
             </Label>
             <Input
               type="email"
-              //   value={email}
-              //   onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="your@email.com"
               required
               className="focus-visible:ring-1 focus-visible:ring-primary"
@@ -95,8 +113,8 @@ export const LoginForm = () => {
           </div>
 
           <Button
-            //    onClick={signInWithEmail}
-            // disabled={emailPending}
+            onClick={signInWithEmail}
+            disabled={emailPending}
             className="flex items-center justify-center gap-2"
           >
             {emailPending ? (

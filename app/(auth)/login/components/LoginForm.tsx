@@ -10,10 +10,12 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { authClient } from "@/lib/auth-client";
 import { Loader, Loader2, Send } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import { FaGithub } from "react-icons/fa";
+import { toast } from "sonner";
 
 export const LoginForm = () => {
   const router = useRouter();
@@ -21,6 +23,23 @@ export const LoginForm = () => {
   const [githubPending, startGithubTransition] = useTransition();
   const [emailPending, startEmailTransition] = useTransition();
   const [email, setEmail] = useState("");
+
+  async function signInWithGithub() {
+    startGithubTransition(async () => {
+      await authClient.signIn.social({
+        provider: "github",
+        callbackURL: "/",
+        fetchOptions: {
+          onSuccess: () => {
+            toast.success("Signed in with Github, you will be redirected...");
+          },
+          onError: (error) => {
+            toast.error("Internal server error");
+          },
+        },
+      });
+    });
+  }
 
   return (
     <Card className="w-full border border-border shadow-md backdrop-blur-sm">
@@ -35,10 +54,10 @@ export const LoginForm = () => {
 
       <CardContent className="flex flex-col gap-5">
         <Button
-          //   disabled={githubPending}
+          disabled={githubPending}
           className="w-full flex items-center justify-center gap-2"
           variant="outline"
-          //   onClick={signInWithGithub}
+          onClick={signInWithGithub}
         >
           {githubPending ? (
             <>

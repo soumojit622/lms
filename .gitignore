@@ -41,3 +41,4 @@ yarn-error.log*
 next-env.d.ts
 imp.txt
 .env
+/lib/generated/prisma

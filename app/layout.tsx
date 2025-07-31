@@ -1,8 +1,10 @@
+import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google"; // Beautiful Google Fonts
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Toaster } from "@/components/ui/sonner";
+import { BackToTopButton } from "@/components/BackToTopButton";
 
 // Load Inter font for main content (clean and professional)
 const inter = Inter({
@@ -96,7 +98,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Footer />
           <Toaster closeButton position="bottom-center" />
+          <BackToTopButton/>
         </ThemeProvider>
       </body>
     </html>

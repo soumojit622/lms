@@ -33,7 +33,9 @@ export default function Footer() {
               height={36}
               className="object-contain"
             />
-            <span className="text-2xl font-bold text-foreground">ThinkLab</span>
+            <span className="text-2xl font-extrabold tracking-tight text-foreground group-hover:text-primary transition-colors">
+              Think<span className="text-primary">Lab</span>
+            </span>
           </div>
           <p className="text-sm leading-relaxed text-muted-foreground mb-6">
             Elevating modern education with interactive, expert-led content for

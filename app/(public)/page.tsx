@@ -291,17 +291,17 @@ export default function Home() {
               {
                 name: "Dr. Ananya Roy",
                 expertise: "AI & Data Science",
-                img: "/instructors/ananya.jpg",
+                img: "/female.jpeg",
               },
               {
                 name: "Mark Jensen",
                 expertise: "Web Development",
-                img: "/instructors/mark.jpg",
+                img: "/male.jpg",
               },
               {
                 name: "Ritika Sharma",
                 expertise: "Product Design",
-                img: "/instructors/ritika.jpg",
+                img: "/female.jpeg",
               },
             ].map((instructor, i) => (
               <div

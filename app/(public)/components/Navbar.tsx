@@ -68,7 +68,18 @@ export const Navbar = () => {
           <ModeToggle />
           {!isPending &&
             (session ? (
-              <UserDropdown />
+              <UserDropdown
+                email={session.user.email}
+                image={
+                  session?.user.image ??
+                  `https://avatar.vercel.sh/rauchg/${session?.user.email}`
+                }
+                name={
+                  session?.user.name && session?.user.name.length > 0
+                    ? session?.user.name
+                    : session?.user.email.split("@")[0]
+                }
+              />
             ) : (
               <div className="flex items-center gap-2">
                 <Link
@@ -143,7 +154,18 @@ export const Navbar = () => {
 
                 {!isPending &&
                   (session ? (
-                    <UserDropdown />
+                    <UserDropdown
+                      email={session.user.email}
+                      image={
+                        session?.user.image ??
+                        `https://avatar.vercel.sh/rauchg/${session?.user.email}`
+                      }
+                      name={
+                        session?.user.name && session?.user.name.length > 0
+                          ? session?.user.name
+                          : session?.user.email.split("@")[0]
+                      }
+                    />
                   ) : (
                     <div className="space-y-2">
                       <Link

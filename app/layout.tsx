@@ -73,7 +73,7 @@ export const metadata: Metadata = {
 
   // Specifies the path to the website's favicon (icon shown in browser tabs)
   icons: {
-    icon: "/favicon.ico", // Must exist in the public directory of your project
+    icon: "/logo.svg", // Must exist in the public directory of your project
   },
 
   // Sets the base URL used when resolving relative URLs in metadata

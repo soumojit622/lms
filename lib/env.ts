@@ -9,7 +9,7 @@ export const env = createEnv({
         AUTH_GITHUB_CLIENT_ID: z.string().min(1),
         AUTH_GITHUB_SECRET: z.string().min(1),
         RESEND_API_KEY: z.string().min(1),
-        // ARCJET_KEY: z.string().min(1),
+        ARCJET_KEY: z.string().min(1),
         // AWS_ACCESS_KEY_ID: z.string().min(1),
         // AWS_SECRET_ACCESS_KEY: z.string().min(1),
         // AWS_ENDPOINT_URL_S3: z.string().min(1),

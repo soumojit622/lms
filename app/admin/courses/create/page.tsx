@@ -1,4 +1,5 @@
 "use client";
+import { Uploader } from "@/components/file-uploader/Uploader";
 import { RichTextEditor } from "@/components/rich-text-editor/Editor";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
@@ -246,18 +247,10 @@ export default function CourseCreationPage() {
                       Thumbnail Image
                     </FormLabel>
                     <FormControl>
-                      {/* Replace this with your actual uploader component */}
-                      {/* 
-        <Uploader
-          onChange={field.onChange}
-          value={field.value}
-          fileTypeAccepted="image"
-        /> 
-        */}
-                      <Input
-                        type="text"
-                        placeholder="Enter image file key or URL..."
-                        {...field}
+                      <Uploader
+                        onChange={field.onChange}
+                        value={field.value}
+                        fileTypeAccepted="image"
                       />
                     </FormControl>
                     <FormMessage />

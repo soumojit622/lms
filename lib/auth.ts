@@ -1,5 +1,3 @@
-import "server-only"
-
 import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
 import { prisma } from "./db";
@@ -29,29 +27,29 @@ const buildOTPEmail = (otp: string) => `
 `;
 
 export const auth = betterAuth({
-    database: prismaAdapter(prisma, {
-        provider: "postgresql",
+  database: prismaAdapter(prisma, {
+    provider: "postgresql",
+  }),
+
+  socialProviders: {
+    github: {
+      clientId: env.AUTH_GITHUB_CLIENT_ID,
+      clientSecret: env.AUTH_GITHUB_SECRET,
+    },
+  },
+
+  plugins: [
+    emailOTP({
+      async sendVerificationOTP({ email, otp }) {
+        await resend.emails.send({
+          from: "ThinkLab <onboarding@resend.dev>",
+          to: [email],
+          subject: "Your ThinkLab Verification Code",
+          html: buildOTPEmail(otp),
+        });
+      },
     }),
 
-    socialProviders: {
-        github: {
-            clientId: env.AUTH_GITHUB_CLIENT_ID,
-            clientSecret: env.AUTH_GITHUB_SECRET,
-        },
-    },
-
-    plugins: [
-        emailOTP({
-            async sendVerificationOTP({ email, otp }) {
-                await resend.emails.send({
-                    from: "ThinkLab <onboarding@resend.dev>",
-                    to: [email],
-                    subject: "Your ThinkLab Verification Code",
-                    html: buildOTPEmail(otp),
-                });
-            },
-        }),
-
-        admin(), // Adds optional admin UI/tools
-    ],
+    admin(), // Adds optional admin UI/tools
+  ],
 });

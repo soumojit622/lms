@@ -34,14 +34,14 @@ export const RenderEmptyState = ({
         </span>
       </p>
       <Button type="button" className="mt-4">
-        <FilePlus className=" size-4" />
+        <FilePlus className="size-4" />
         Select Files
       </Button>
     </div>
   );
 };
 
-export const RenderErrorState = () => {
+export const RenderErrorState = ({ onRetry }: { onRetry: () => void }) => {
   return (
     <div className="text-center">
       <div className="mx-auto mb-4 flex size-14 items-center justify-center rounded-full bg-destructive/10">
@@ -51,8 +51,13 @@ export const RenderErrorState = () => {
       <p className="mt-1 text-sm text-muted-foreground">
         Something went wrong. Please try again.
       </p>
-      <Button type="button" variant="destructive" className="mt-4">
-        <RotateCcw className=" size-4" />
+      <Button
+        type="button"
+        variant="destructive"
+        className="mt-4"
+        onClick={onRetry}
+      >
+        <RotateCcw className="size-4" />
         Retry File Selection
       </Button>
     </div>

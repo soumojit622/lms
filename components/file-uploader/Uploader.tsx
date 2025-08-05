@@ -35,6 +35,23 @@ interface iAppProps {
 export const Uploader = ({ value, onChange, fileTypeAccepted }: iAppProps) => {
   const fileUrl = useConstructUrl(value || "");
 
+  const handleRetry = () => {
+    if (fileState.objectUrl && !fileState.objectUrl.startsWith("http")) {
+      URL.revokeObjectURL(fileState.objectUrl);
+    }
+
+    setFileState((prev) => ({
+      ...prev,
+      file: null,
+      uploading: false,
+      progress: 0,
+      objectUrl: undefined,
+      error: false,
+      id: null,
+      isDeleting: false,
+    }));
+  };
+
   const [fileState, setFileState] = useState<UploaderState>({
     error: false,
     file: null,
@@ -195,7 +212,7 @@ export const Uploader = ({ value, onChange, fileTypeAccepted }: iAppProps) => {
     }
 
     if (fileState.error) {
-      return <RenderErrorState />;
+      return <RenderErrorState onRetry={handleRetry} />;
     }
 
     if (fileState.objectUrl) {

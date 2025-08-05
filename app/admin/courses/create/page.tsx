@@ -26,6 +26,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import { tryCatch } from "@/hooks/try-catch";
 import { useConfetti } from "@/hooks/use-confetti";
 import {
   courseCategories,
@@ -55,6 +56,8 @@ import { useRouter } from "next/navigation";
 import { useTransition } from "react";
 import { useForm } from "react-hook-form";
 import slugify from "slugify";
+import { toast } from "sonner";
+import { CreateCourse } from "./actions";
 
 export default function CourseCreationPage() {
   const router = useRouter();
@@ -77,26 +80,26 @@ export default function CourseCreationPage() {
     },
   });
 
-  const onSubmit = () => {};
-  //   const onSubmit = (values: CourseSchemaType) => {
-  //     startTransition(async () => {
-  //       const { data: result, error } = await tryCatch(CreateCouse(values));
+  // const onSubmit = () => {};
+  const onSubmit = (values: CourseSchemaType) => {
+    startTransition(async () => {
+      const { data: result, error } = await tryCatch(CreateCourse(values));
 
-  //       if (error) {
-  //         toast.error("An unexpected error occurred");
-  //         return;
-  //       }
+      if (error) {
+        toast.error("An unexpected error occurred");
+        return;
+      }
 
-  //       if (result.status === "success") {
-  //         toast.success(result.message);
-  //         triggerConfetti();
-  //         form.reset();
-  //         router.push("/admin/courses");
-  //       } else if (result.status === "error") {
-  //         toast.error(result.message);
-  //       }
-  //     });
-  //   };
+      if (result.status === "success") {
+        toast.success(result.message);
+        triggerConfetti();
+        form.reset();
+        router.push("/admin/courses");
+      } else if (result.status === "error") {
+        toast.error(result.message);
+      }
+    });
+  };
 
   return (
     <>

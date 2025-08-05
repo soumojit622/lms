@@ -1,19 +1,18 @@
 "use client";
 
+import { useConstructUrl } from "@/hooks/use-construct-url";
+import { cn } from "@/lib/utils";
 import { useCallback, useEffect, useState } from "react";
 import { FileRejection, useDropzone } from "react-dropzone";
-import { Card, CardContent } from "../ui/card";
-import { cn } from "@/lib/utils";
-
 import { toast } from "sonner";
 import { v4 as uuidv4 } from "uuid";
+import { Card, CardContent } from "../ui/card";
 import {
   RenderEmptyState,
   RenderErrorState,
   RenderUploadedState,
   RenderUploadingState,
 } from "./RenderState";
-import { useConstructUrl } from "@/hooks/use-construct-url";
 
 interface UploaderState {
   id: string | null;
@@ -83,7 +82,6 @@ export const Uploader = ({ value, onChange, fileTypeAccepted }: iAppProps) => {
         }
 
         const { presignedUrl, key } = await presignedResponse.json();
-
         await new Promise<void>((resolve, reject) => {
           const xhr = new XMLHttpRequest();
           xhr.upload.onprogress = (event) => {
@@ -97,7 +95,7 @@ export const Uploader = ({ value, onChange, fileTypeAccepted }: iAppProps) => {
           };
 
           xhr.onload = () => {
-            if (xhr.status === 200 || xhr.status === 204) {
+            if (xhr.status >= 200 && xhr.status < 300) {
               setFileState((prev) => ({
                 ...prev,
                 uploading: false,
@@ -106,16 +104,20 @@ export const Uploader = ({ value, onChange, fileTypeAccepted }: iAppProps) => {
               }));
 
               onChange?.(key);
-
               toast.success("File uploaded successfully");
-
               resolve();
             } else {
+              console.error(
+                "Upload failed, status:",
+                xhr.status,
+                xhr.statusText
+              );
               reject(new Error("Upload failed..."));
             }
           };
 
           xhr.onerror = () => {
+            console.error("XHR Upload error:", xhr.statusText);
             reject(new Error("Upload failed..."));
           };
 

@@ -8,6 +8,11 @@ const nextConfig = {
         hostname: "source.unsplash.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "thinklab-lms.fly.storage.tigris.dev",
+        pathname: "/**",
+      },
     ],
   },
 };

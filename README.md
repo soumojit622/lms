@@ -16,35 +16,48 @@
 
 ---
 
+## 💡 Why ThinkLab?  
+
+ThinkLab is more than just an online learning platform:  
+
+- 🎯 **Focused Learning** – Stay on track with lesson completion tracking.  
+- 🧑‍🏫 **Expert-Led Courses** – Learn directly from professionals.  
+- ⚡ **Lightning Fast** – Deployed on Vercel with global edge network.  
+- 🔒 **Secure by Design** – Arcjet security, rate limiting, and Stripe integration.  
+- 📊 **Data-Driven Insights** – Analytics for learners and educators.  
+- 🛠️ **Built for Scale** – Using Next.js 15, Prisma & Neon DB for reliability.  
+
+---
+
 ## ✨ Features  
 
 ### 🎨 User Experience & UI
-- 🌐 **Next.js 15** with App Router  
-- 🎨 **Tailwind CSS & Shadcn UI** for sleek, responsive design  
-- 🖱️ **Drag & Drop Course Builder**  
-- 📝 **Custom Rich Text Editor** for course content  
-- 🎥 **Custom Video Player** with smooth controls  
-- ⭐ **Custom Dropzone** for file uploads  
-- 📊 **Beautiful Analytics Dashboard** for insights  
+- 🌐 Next.js 15 with App Router  
+- 🎨 Tailwind CSS + Shadcn UI (modern & responsive)  
+- 🖱️ Drag & Drop Course Builder  
+- 📝 Custom Rich Text Editor  
+- 🎥 Custom Video Player  
+- ⭐ Custom Dropzone for uploads  
+- 📊 Interactive Analytics Dashboard  
 
 ### 🔒 Authentication & Security
-- 🔑 **Better-Auth** (Email OTP & GitHub OAuth)  
-- 🛡️ **Arcjet Security** – protects against XSS, SQL Injection, and other attacks  
-- 🚫 **Rate Limiting** to prevent abuse  
+- 🔑 Better-Auth (Email OTP & GitHub OAuth)  
+- 🛡️ Arcjet Security (XSS, SQL Injection & more)  
+- 🚫 Built-in Rate Limiting  
 
 ### 📚 Learning & Progress
-- 📈 **Progress Tracking** for each student  
-- ✅ **Lesson Completion Tracking**  
-- 👤 **Student Dashboard** with course progress overview  
-- 🧑‍💼 **Admin Dashboard** for managing courses, users & payments  
+- 📈 Student Progress Tracking  
+- ✅ Lesson Completion Status  
+- 👤 Student Dashboard  
+- 🧑‍💼 Admin Dashboard  
 
 ### 💳 Payments & Storage
-- 💳 **Stripe Payment Integration** (secure checkout, subscriptions, one-time payments)  
-- 📁 **File Uploads via S3 Presigned URLs**  
-- 💾 **Neon Postgres Database** with **Prisma ORM**  
+- 💳 Stripe Integration (secure checkout)  
+- 📁 File Uploads via S3 Presigned URLs  
+- 💾 Neon Postgres + Prisma ORM  
 
 ### 🚀 Deployment
-- ⚡ **Deployed on Vercel** for speed & scalability  
+- ⚡ Fully deployed on Vercel  
 
 ---
 
@@ -66,6 +79,28 @@
 
 ---
 
+## 🖼️ Preview (Coming Soon)
+
+📌 Add screenshots / GIFs of:  
+- Landing Page  
+- Student Dashboard  
+- Course Builder  
+- Payment Flow  
+
+---
+
+## 🤝 Contributing  
+
+We welcome contributions!  
+
+1. 🍴 Fork the repository  
+2. 🌱 Create a new branch (`feature/your-feature`)  
+3. ✨ Commit your changes (`git commit -m "Add feature"`)  
+4. 📤 Push your branch (`git push origin feature/your-feature`)  
+5. 🔥 Open a Pull Request  
+
+---
+
 ## 📚 Resources  
 
 - [Next.js](https://nextjs.org)  
@@ -75,31 +110,25 @@
 - [Prisma](https://prisma.io)  
 - [Neon](https://neon.tech/)  
 - [Tigris](https://www.tigrisdata.com/)  
-- [Vercel](https://vercel.com/)  
 - [Zod](https://zod.dev/)  
 - [Better-Auth](https://www.better-auth.com/)  
-
----
-
-## 🤝 Contributing  
-
-We welcome contributions! Here’s how you can help:  
-
-- 🐛 Report bugs by opening an issue  
-- ✨ Suggest new features  
-- 🔥 Submit a pull request  
-
-Please follow [Conventional Commits](https://www.conventionalcommits.org/) for PRs.  
+- [Stripe](https://stripe.com/)  
+- [Vercel](https://vercel.com/)  
 
 ---
 
 ## 📩 Support  
 
-If you like this project, give it a ⭐ on GitHub!  
-For questions, reach out:  
-📧 soumojitbanerjee22@gmail.com  
+💌 Contact me for feedback & collaborations:  
+📧 **soumojitbanerjee22@gmail.com**  
 🔗 [LinkedIn](https://www.linkedin.com/in/soumojit-banerjee-4914b3228/) | [Portfolio](https://soumojit.vercel.app)  
 
 ---
 
-<p align="center">💖 Made with passion by <a href="https://soumojit.vercel.app">Soumojit Banerjee</a></p>
+## 📜 License  
+
+This project is licensed under the **MIT License** – feel free to use and modify it.  
+
+---
+
+<p align="center">💖 Built with passion by <a href="https://soumojit.vercel.app">Soumojit Banerjee</a></p>

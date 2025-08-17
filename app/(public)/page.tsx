@@ -5,8 +5,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import {
   BarChart4,
   BrainCircuit,
@@ -21,6 +22,21 @@ import {
   Quote,
   Rocket,
   Star,
+} from "lucide-react";
+
+import {
+  BadgeDollarSign,
+  BookOpen,
+  Building2,
+  Github,
+  Heart,
+  Instagram,
+  Linkedin,
+  Lock,
+  Mail,
+  Newspaper,
+  ShieldCheck,
+  Users,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -500,6 +516,201 @@ export default function Home() {
           ))}
         </Accordion>
       </section>
+
+      {/* Footer */}
+      <footer className="relative border-t">
+        <section className="max-w-7xl mx-auto px-6 lg:px-12 py-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-12">
+          {/* Logo & Description */}
+          <div className="col-span-1 md:col-span-2">
+            <div className="flex items-center gap-3 mb-5">
+              <Image
+                src="/logo.svg"
+                alt="ThinkLab Logo"
+                width={42}
+                height={42}
+                className="object-contain"
+              />
+              <span className="text-2xl font-extrabold tracking-tight text-foreground">
+                Think<span className="text-primary">Lab</span>
+              </span>
+            </div>
+            <p className="text-sm leading-relaxed text-muted-foreground mb-6 max-w-md">
+              Elevating modern education with interactive, expert-led content
+              for today’s learners — wherever they are.
+            </p>
+            <div className="flex items-center gap-4">
+              <Link
+                href="https://github.com/soumojit622"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="p-2 rounded-full bg-muted hover:bg-primary/10 transition"
+              >
+                <Github className="w-4 h-4 hover:text-primary transition" />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/soumojit-banerjee-4914b3228/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="p-2 rounded-full bg-muted hover:bg-primary/10 transition"
+              >
+                <Linkedin className="w-4 h-4 hover:text-primary transition" />
+              </Link>
+              <Link
+                href="https://www.instagram.com/soumo622/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="p-2 rounded-full bg-muted hover:bg-primary/10 transition"
+              >
+                <Instagram className="w-4 h-4 hover:text-primary transition" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Explore */}
+          <div>
+            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-4">
+              Explore
+            </h3>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li>
+                <Link
+                  href="/courses"
+                  className="flex items-center gap-2 hover:text-primary"
+                >
+                  <BookOpen className="w-4 h-4" />
+                  Courses
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/categories"
+                  className="flex items-center gap-2 hover:text-primary"
+                >
+                  <GraduationCap className="w-4 h-4" />
+                  Categories
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/instructors"
+                  className="flex items-center gap-2 hover:text-primary"
+                >
+                  <Users className="w-4 h-4" />
+                  Instructors
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/pricing"
+                  className="flex items-center gap-2 hover:text-primary"
+                >
+                  <BadgeDollarSign className="w-4 h-4" />
+                  Pricing
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-4">
+              Company
+            </h3>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li>
+                <Link
+                  href="/about"
+                  className="flex items-center gap-2 hover:text-primary"
+                >
+                  <Building2 className="w-4 h-4" />
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="flex items-center gap-2 hover:text-primary"
+                >
+                  <Newspaper className="w-4 h-4" />
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/careers"
+                  className="flex items-center gap-2 hover:text-primary"
+                >
+                  <Briefcase className="w-4 h-4" />
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/press"
+                  className="flex items-center gap-2 hover:text-primary"
+                >
+                  <Megaphone className="w-4 h-4" />
+                  Press
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div>
+            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-4">
+              Stay Updated
+            </h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              Join our newsletter for updates, articles, and more.
+            </p>
+            <form className="flex w-full items-center gap-2">
+              <Input
+                type="email"
+                placeholder="Your email"
+                className="flex-1 rounded-xl shadow-sm"
+              />
+              <Button type="submit" size="sm" className="rounded-xl">
+                <Mail className="w-4 h-4 mr-1" />
+                Subscribe
+              </Button>
+            </form>
+          </div>
+        </section>
+
+        {/* Footer Bottom */}
+        <div className="border-t border-border/60 py-6 px-6 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground gap-4">
+          <p>
+            &copy; {new Date().getFullYear()} ThinkLab. All rights reserved.
+          </p>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/privacy"
+              className="flex items-center gap-1 hover:text-primary"
+            >
+              <Lock className="w-3 h-3" />
+              Privacy
+            </Link>
+            <span className="text-muted-foreground">|</span>
+            <Link
+              href="/terms"
+              className="flex items-center gap-1 hover:text-primary"
+            >
+              <ShieldCheck className="w-3 h-3" />
+              Terms
+            </Link>
+          </div>
+        </div>
+
+        {/* Creator Note */}
+        <div className="text-center text-sm text-muted-foreground pb-6">
+          Made with <Heart className="inline w-3 h-3 text-red-500 mx-1" /> by{" "}
+          <span className="font-semibold text-primary">Soumojit Banerjee</span>
+        </div>
+      </footer>
     </>
   );
 }

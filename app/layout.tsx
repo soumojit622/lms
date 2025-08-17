@@ -99,8 +99,9 @@ export default function RootLayout({
         >
           {children}
           {/* <Footer /> */}
-          <Toaster closeButton position="bottom-center" />
-          <BackToTopButton/>
+          {/* <Toaster closeButton position="bottom-center" richColors/> */}
+          <Toaster closeButton richColors />
+          <BackToTopButton />
         </ThemeProvider>
       </body>
     </html>

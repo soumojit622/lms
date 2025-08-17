@@ -1,4 +1,3 @@
-// next.config.js or next.config.ts
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -11,6 +10,16 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "thinklab-lms.fly.storage.tigris.dev",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "ui-avatars.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "yourcdn.com",
         pathname: "/**",
       },
     ],

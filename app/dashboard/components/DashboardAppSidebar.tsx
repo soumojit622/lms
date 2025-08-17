@@ -3,18 +3,18 @@
 import * as React from "react";
 import {
   IconCamera,
-  IconChartBar,
   IconDashboard,
   IconFileAi,
   IconFileDescription,
-  IconFolder,
   IconHelp,
-  IconListDetails,
   IconSearch,
   IconSettings,
   IconUsers,
 } from "@tabler/icons-react";
 
+import { NavMain } from "@/components/sidebar/nav-main";
+import { NavSecondary } from "@/components/sidebar/nav-secondary";
+import { NavUser } from "@/components/sidebar/nav-user";
 import {
   Sidebar,
   SidebarContent,
@@ -27,36 +27,13 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/public/logo.png";
-import { NavMain } from "./nav-main";
-import { NavSecondary } from "./nav-secondary";
-import { NavUser } from "./nav-user";
 
 const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "/admin",
+      url: "/dashboard",
       icon: IconDashboard,
-    },
-    {
-      title: "Courses",
-      url: "/admin/courses",
-      icon: IconListDetails,
-    },
-    {
-      title: "Analytics",
-      url: "/admin/analytics",
-      icon: IconChartBar,
-    },
-    {
-      title: "Projects",
-      url: "/admin/projects",
-      icon: IconFolder,
-    },
-    {
-      title: "Team",
-      url: "/admin/team",
-      icon: IconUsers,
     },
   ],
   navClouds: [
@@ -110,17 +87,17 @@ const data = {
   navSecondary: [
     {
       title: "Settings",
-      url: "/admin/settings",
+      url: "/settings",
       icon: IconSettings,
     },
     {
       title: "Get Help",
-      url: "/admin/help",
+      url: "/help",
       icon: IconHelp,
     },
     {
       title: "Search",
-      url: "/admin/search",
+      url: "/search",
       icon: IconSearch,
     },
   ],
@@ -142,7 +119,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   alt="ThinkLab Logo"
                   width={26}
                   height={26}
-                  className="object-contain transition-transform "
+                  className="object-contain transition-transform group-hover:scale-105"
                 />
                 <span className="text-2xl font-extrabold tracking-tight text-foreground transition-colors">
                   Think<span className="text-primary">Lab</span>

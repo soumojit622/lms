@@ -1,5 +1,8 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
 import {
   BadgeDollarSign,
   BookOpen,
@@ -45,7 +48,7 @@ export default function Footer() {
             <a
               href="https://github.com/soumojit622"
               target="_blank"
-              aria-label="Twitter"
+              aria-label="GitHub"
             >
               <Github className="w-4 h-4 hover:text-primary transition-colors" />
             </a>
@@ -73,40 +76,40 @@ export default function Footer() {
           </h3>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>
-              <a
+              <Link
                 href="/courses"
                 className="flex items-center gap-2 hover:text-primary"
               >
                 <BookOpen className="w-4 h-4" />
                 Courses
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/categories"
                 className="flex items-center gap-2 hover:text-primary"
               >
                 <GraduationCap className="w-4 h-4" />
                 Categories
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/instructors"
                 className="flex items-center gap-2 hover:text-primary"
               >
                 <Users className="w-4 h-4" />
                 Instructors
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/pricing"
                 className="flex items-center gap-2 hover:text-primary"
               >
                 <BadgeDollarSign className="w-4 h-4" />
                 Pricing
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -118,40 +121,40 @@ export default function Footer() {
           </h3>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>
-              <a
+              <Link
                 href="/about"
                 className="flex items-center gap-2 hover:text-primary"
               >
                 <Building2 className="w-4 h-4" />
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/blog"
                 className="flex items-center gap-2 hover:text-primary"
               >
                 <Newspaper className="w-4 h-4" />
                 Blog
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/careers"
                 className="flex items-center gap-2 hover:text-primary"
               >
                 <Briefcase className="w-4 h-4" />
                 Careers
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/press"
                 className="flex items-center gap-2 hover:text-primary"
               >
                 <Megaphone className="w-4 h-4" />
                 Press
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -165,7 +168,7 @@ export default function Footer() {
             Join our newsletter for updates, articles, and more.
           </p>
           <form className="flex w-full items-center space-x-2">
-            <Input type="email" placeholder="Your email" className="flex-1" />
+            <Input type="email" placeholder="Email" className="flex-1" />
             <Button type="submit" size="sm">
               <Mail className="w-4 h-4 mr-1" />
               Subscribe
@@ -178,21 +181,21 @@ export default function Footer() {
       <div className="border-t mt-16 py-6 px-4 flex flex-col sm:flex-row justify-between items-center text-xs text-muted-foreground gap-4">
         <p>&copy; {new Date().getFullYear()} ThinkLab. All rights reserved.</p>
         <div className="flex items-center gap-3">
-          <a
+          <Link
             href="/privacy"
             className="flex items-center gap-1 hover:text-primary"
           >
             <Lock className="w-3 h-3" />
             Privacy
-          </a>
+          </Link>
           <span className="text-muted-foreground">|</span>
-          <a
+          <Link
             href="/terms"
             className="flex items-center gap-1 hover:text-primary"
           >
             <ShieldCheck className="w-3 h-3" />
             Terms
-          </a>
+          </Link>
         </div>
       </div>
 

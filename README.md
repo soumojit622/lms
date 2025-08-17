@@ -16,30 +16,35 @@
 
 ---
 
-## ✨ Key Features  
+## ✨ Features  
 
-### 🎨 UI & Styling
-- Next.js 15 with App Router  
-- Tailwind CSS & Shadcn UI  
-- Drag & Drop Course Structure  
-- Custom Rich Text Editor  
-- Beautiful Analytics Dashboard  
+### 🎨 User Experience & UI
+- 🌐 **Next.js 15** with App Router  
+- 🎨 **Tailwind CSS & Shadcn UI** for sleek, responsive design  
+- 🖱️ **Drag & Drop Course Builder**  
+- 📝 **Custom Rich Text Editor** for course content  
+- 🎥 **Custom Video Player** with smooth controls  
+- ⭐ **Custom Dropzone** for file uploads  
+- 📊 **Beautiful Analytics Dashboard** for insights  
 
-### 🔒 Security & Authentication
-- Email OTP & GitHub OAuth (Better-Auth)  
-- Arcjet Security (XSS, SQL Injection Protection)  
-- Rate Limiting per user/session  
+### 🔒 Authentication & Security
+- 🔑 **Better-Auth** (Email OTP & GitHub OAuth)  
+- 🛡️ **Arcjet Security** – protects against XSS, SQL Injection, and other attacks  
+- 🚫 **Rate Limiting** to prevent abuse  
 
-### 📚 Learning Experience
-- Progress & Lesson Completion Tracking  
-- Admin Dashboard for course management  
-- Student Dashboard for learners  
-- Custom Video Player & Dropzone Uploads  
+### 📚 Learning & Progress
+- 📈 **Progress Tracking** for each student  
+- ✅ **Lesson Completion Tracking**  
+- 👤 **Student Dashboard** with course progress overview  
+- 🧑‍💼 **Admin Dashboard** for managing courses, users & payments  
 
 ### 💳 Payments & Storage
-- Stripe Payment Integration  
-- File Uploads with S3 Presigned URLs  
-- Neon Postgres + Prisma ORM  
+- 💳 **Stripe Payment Integration** (secure checkout, subscriptions, one-time payments)  
+- 📁 **File Uploads via S3 Presigned URLs**  
+- 💾 **Neon Postgres Database** with **Prisma ORM**  
+
+### 🚀 Deployment
+- ⚡ **Deployed on Vercel** for speed & scalability  
 
 ---
 

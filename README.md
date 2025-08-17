@@ -1,37 +1,45 @@
-# 📚 ThinkLab – Modern Education Platform  
+<h1 align="center">🚀 ThinkLab – Modern Education Platform</h1>
 
-Elevating modern education with **interactive, expert-led content** for today’s learners — wherever they are.  
+<p align="center">
+  Elevating learning with expert-led courses, interactive dashboards, and secure payments – 
+  all built on cutting-edge web technologies.
+</p>
 
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
-![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+  <img src="https://img.shields.io/badge/Shadcn_UI-000000?style=for-the-badge&logo=radix-ui&logoColor=white" />
+  <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white" />
+  <img src="https://img.shields.io/badge/Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+</p>
 
 ---
 
-## ✨ Features  
+## ✨ Key Features  
 
-- 🌐 **Next.js 15** – Latest app router & server components  
-- 🎨 **Tailwind CSS & Shadcn UI** – Modern UI toolkit  
-- 🔒 **Authentication with Better-Auth** (Email OTP & GitHub OAuth)  
-- 🛡️ **Arcjet Security** – Protects against XSS, SQL injection & more  
-- 📈 **Progress Tracking**  
-- 🧑‍💼 **Admin Dashboard**  
-- 👤 **Customer Dashboard**  
-- 🚫 **Rate Limiting**  
-- 🎥 **Custom Video Player**  
-- 📊 **Beautiful Analytics**  
-- 📁 **File Uploads with S3 (Presigned URLs)**  
-- ✅ **Lesson Completion Tracking**  
-- ⭐ **Custom Dropzone**  
-- 💳 **Stripe Payment Integration**  
-- 🖱️ **Course Structure with Drag & Drop**  
-- 📝 **Custom Rich Text Editor**  
-- 🧮 **Neon Postgres DB**  
-- 💾 **Prisma ORM**  
-- 🚀 **Deployed on Vercel**  
+### 🎨 UI & Styling
+- Next.js 15 with App Router  
+- Tailwind CSS & Shadcn UI  
+- Drag & Drop Course Structure  
+- Custom Rich Text Editor  
+- Beautiful Analytics Dashboard  
+
+### 🔒 Security & Authentication
+- Email OTP & GitHub OAuth (Better-Auth)  
+- Arcjet Security (XSS, SQL Injection Protection)  
+- Rate Limiting per user/session  
+
+### 📚 Learning Experience
+- Progress & Lesson Completion Tracking  
+- Admin Dashboard for course management  
+- Student Dashboard for learners  
+- Custom Video Player & Dropzone Uploads  
+
+### 💳 Payments & Storage
+- Stripe Payment Integration  
+- File Uploads with S3 Presigned URLs  
+- Neon Postgres + Prisma ORM  
 
 ---
 
@@ -42,7 +50,7 @@ Elevating modern education with **interactive, expert-led content** for today’
 | **Next.js 15**    | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white) |
 | **Tailwind CSS**  | ![Tailwind](https://img.shields.io/badge/Tailwind-38B2AC?style=flat&logo=tailwind-css&logoColor=white) |
 | **Shadcn UI**     | ![Shadcn](https://img.shields.io/badge/Shadcn_UI-000000?style=flat&logo=radix-ui&logoColor=white) |
-| **Better-Auth**   | ![Auth](https://img.shields.io/badge/Auth-6366F1?style=flat&logo=github&logoColor=white) |
+| **Better-Auth**   | ![Auth](https://img.shields.io/badge/BetterAuth-6366F1?style=flat&logo=github&logoColor=white) |
 | **Arcjet**        | ![Arcjet](https://img.shields.io/badge/Arcjet-2563EB?style=flat&logo=shield&logoColor=white) |
 | **Prisma**        | ![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat&logo=prisma&logoColor=white) |
 | **Neon DB**       | ![Neon](https://img.shields.io/badge/Neon-00E599?style=flat&logo=postgresql&logoColor=white) |
@@ -70,18 +78,23 @@ Elevating modern education with **interactive, expert-led content** for today’
 
 ## 🤝 Contributing  
 
-Contributions, issues, and feature requests are welcome!  
-Feel free to **open an issue** or **submit a pull request**.  
+We welcome contributions! Here’s how you can help:  
+
+- 🐛 Report bugs by opening an issue  
+- ✨ Suggest new features  
+- 🔥 Submit a pull request  
+
+Please follow [Conventional Commits](https://www.conventionalcommits.org/) for PRs.  
 
 ---
 
-## 📜 License  
+## 📩 Support  
 
-This project is **MIT Licensed** – free to use and modify.  
+If you like this project, give it a ⭐ on GitHub!  
+For questions, reach out:  
+📧 soumojitbanerjee22@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/soumojit-banerjee-4914b3228/) | [Portfolio](https://soumojit.vercel.app)  
 
 ---
 
-## 💖 Acknowledgements  
-
-Made with ❤️ by [**Soumojit Banerjee**](https://soumojit.vercel.app)  
-🔗 [LinkedIn](https://www.linkedin.com/in/soumojit-banerjee-4914b3228/) | [GitHub](https://github.com/soumojit622)
+<p align="center">💖 Made with passion by <a href="https://soumojit.vercel.app">Soumojit Banerjee</a></p>
